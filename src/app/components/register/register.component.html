@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card-header">
+        <h5 class="title">Add Car</h5>
+    </div>
+    <div class="card-body">
+        <form [formGroup]="registerForm">
+            <div class="form-group mb-3">
+                <label for="fisrtName">First Name</label>
+                <input type="text" id="firstName" formControlName="firstName" class="form-control" placeholder="First Name"/>
+            </div>
+            <div class="form-group mb-3">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" formControlName="lastName" class="form-control" placeholder="Last Name"/>
+            </div>
+            <div class="form-group mb-3">
+                <label for="email">Email</label>
+                <input type="email" id="email" formControlName="email" class="form-control" placeholder="Email"/>
+            </div>
+            <div class="form-group mb-3">
+                <label for="password">Password</label>
+                <input type="password" id="password" formControlName="password" class="form-control" placeholder="Password"/>
+            </div> 
+        </form>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-success" (click)="add()">Add</button>
+
+    </div>
+</div>

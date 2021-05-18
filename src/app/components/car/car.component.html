@@ -1,0 +1,59 @@
+
+
+
+<!--<div class="card row" style="width: 18rem;">
+
+    <div class="card-body " *ngFor="let car of carDetails">
+        <img src="https://localhost:44367/{{car.imagePath[0]}}" class="card-img-top border" alt="Car">
+        <div class="card-body">
+          <h5 class="card-title">Mercedes C320</h5> 
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-muted">Model Year : 2020</li>
+          <li class="list-group-item text-muted">Price : 320$</li>
+          <li class="list-group-item text-muted">Color : Black</li>
+          <li class="list-group-item text-muted">Brand : Mercedes</li>
+        </ul>
+        <div class="card-body d-flex justify-content-between align-items-center">
+          <a href="#" class="card-link ms-3">Details</a>
+          <button class="btn btn-success" style="width: 100px; height: 38px;">Rent</button>
+        </div>
+    </div>
+    
+</div>-->
+<div class="mb-3">
+  <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="Search car">
+</div>
+<div *ngIf ="filterText" class="alert alert-success">
+  You searched {{filterText}} 
+</div>
+<div class="row card-group me-1">
+    <div class="col-4"  *ngFor="let car of carDetails |filter:filterText">
+        <div class="card mb-3" >
+
+            <div class="card-body  " >
+                <img src="https://localhost:44367/{{car.imagePath[0]}}" class="card-img-top border" alt="Car" height="200">
+                <div class="card-body">
+                  <h5 class="card-title">{{car.carName}}</h5> 
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item text-muted">Model Year : {{car.modelYear}}</li>
+                  <li class="list-group-item text-muted">Daily Price : {{car.dailyPrice}}$</li>
+                  <li class="list-group-item text-muted">Color : {{car.colorName}}</li>
+                  <li class="list-group-item text-muted">Brand : {{car.brandName}}</li>
+                </ul>
+                <div class="card-body d-flex justify-content-between align-items-center">
+                  <a href="#" class="card-link ms-3" routerLink="/cars/getcardetailsbyid/{{car.id}}">Details</a>
+                  <button class="btn btn-success" style="width: 100px; height: 38px;" routerLink="/cars/rent/{{car.id}}">Rent</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

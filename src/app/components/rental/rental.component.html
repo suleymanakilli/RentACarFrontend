@@ -1,0 +1,61 @@
+<div class="row" *ngIf="carDetails">
+    <div class="col">
+        <h5 class="fs-1 fw-bold">{{carDetails.carName}}</h5>
+    </div>
+    <div class="col">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner  d-flex "
+             style=" min-height: 20rem; max-height: 35rem">
+              <div *ngFor="let carImage of carDetails.imagePath;  first as firstImage"
+              class="carousel-item align-self-center"
+                [ngClass]="{ active: firstImage }"
+              style="height: 100%; width: 100%">
+                 <img src="https://localhost:44367/{{carImage}}"  style="height: 100%; width: 100%; object-fit: contain"/>
+              </div>
+              
+             </div>
+              <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+</div>
+<div class="card mt-5 mb-5">
+    <div class="card-header fs-1 fw-bold text-center ">
+      Rent this car
+    </div>
+    
+    <div class="card-body  align-items-center">
+      <form [formGroup]="rentalCheckForm" >
+        <div class="d-flex justify-content-between row">
+          <div class="form-group ms-md-5 col text-center mb-3"> 
+            <label for="rentDate" class="d-block fs-3 mb-3" >Pickup Date:</label>
+            <input type="date" id="rentDate" name="rentDate" class="form-control-lg" formControlName="rentDate" >
+          </div>
+          <div class="form-group me-md-5 col text-center">
+            <label for="return" class="d-block fs-3 mb-3">Return Date:</label>
+            <input type="date" id="return" name="return" class="form-control-lg" formControlName="returnDate">
+          </div>
+        </div>
+       
+      </form>
+    </div>
+    <div class="card-footer">
+      <div class="d-flex justify-content-between row">
+        <button class="btn btn-warning col" (click)="check()">Check If Car Available </button>
+        <button class="btn btn-success col" routerLink="/payment/{{carId}}">Rent this car</button>
+      </div>
+    </div>
+    
+    
+  </div>

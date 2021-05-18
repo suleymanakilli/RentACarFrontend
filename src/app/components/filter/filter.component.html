@@ -1,0 +1,28 @@
+
+
+
+
+
+<div class="mb-2" *ngIf="filterService.visible">
+    <div class=" row">
+        <div class="col-5">
+            
+            <select class="form-select" [(ngModel)]="selectedBrand">
+                <option *ngFor="let brand of brands" [ngValue]="brand">{{brand.brandName}}</option>
+            </select>
+            
+        </div>
+        <div class="col-5">
+           
+            <select class="form-select" [(ngModel)]="selectedColor">
+                <option *ngFor="let color of colors" [ngValue]="color">{{color.colorName}}</option>
+            </select>
+            
+        </div>
+        <div class="col-2">
+            <button class="btn btn-success ms-5 me-2" (click)="routeByFilter()">Filter</button>
+            <button class="btn btn-danger" (click)="clearFilter()">Clear</button>
+        </div>
+        
+    </div>
+</div>

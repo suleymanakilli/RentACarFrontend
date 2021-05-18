@@ -1,0 +1,138 @@
+<!--<div >
+    <div class="">
+        <div [formGroup]="rentAddForm">
+            <div class="form-group mb-3">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" placeholder="Account Number" class="form-control" formControlName="cardNumber" />
+            </div>
+            <div class="form-group mb-3">
+                <label for="name">Full name as on the card</label>
+                <input type="text" placeholder="Full Name" class="form-control" formControlName="name" />
+            </div>
+            <div class="form-group mb-3">
+                <label for="expMonth">Expiration Month</label>
+                <input type="text" placeholder="Account Number" class="form-control" formControlName="expMonth" />
+            </div>
+            <div class="form-group mb-3">
+                <label for="expYear">Expiration Year</label>
+                <input type="text" placeholder="Account Number" class="form-control" formControlName="expYear" />
+            </div>
+            <div class="form-group mb-3">
+                <label for="cvv">CVV</label>
+                <input type="text" placeholder="CVV" class="form-control" formControlName="cvv"/>
+            </div>
+
+        </div>
+    </div>
+</div>-->
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.6.95/css/materialdesignicons.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                Card Summary
+            </div>
+            <form [formGroup]="rentAddForm">
+                <div class="card-body">
+                    <div *ngIf="carDetails">
+                        <h1 class="text-center fw-bold">{{carDetails.carName}}</h1>
+                        <h2 class="ms-md-5">Daily Price : {{carDetails.dailyPrice}}$</h2>
+                        <h2 class="ms-md-5" *ngIf="totalPrice">Total Price : {{totalPrice}}$ </h2>
+                    </div>
+                    <div class="d-flex justify-content-between row">
+                        <div class="form-group ms-md-5 col text-center mb-3"> 
+                          <label for="rentDate" class="d-block fs-3 mb-3" >Pickup Date:</label>
+                          <input type="date" id="rentDate" name="rentDate" class="form-control-lg" formControlName="rentDate" (change)="show()" >
+                        </div>
+                        <div class="form-group me-md-5 col text-center">
+                          <label for="return" class="d-block fs-3 mb-3">Return Date:</label>
+                          <input type="date" id="return" name="return" class="form-control-lg" formControlName="returnDate" (change)="show()" >
+                        </div>
+                      </div>
+                </div>
+            </form>
+           
+
+        </div>
+    </div>
+    <div class="padding">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Credit Card / Bank Card</strong>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="paymentForm">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group mb-3">
+                                        <label for="name" >Name</label>
+                                        <input class="form-control" id="name" type="text" formControlName="name" placeholder="Enter your name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group mb-3">
+                                        <label for="ccnumber">Credit Card Number</label>
+                                        <div class="input-group">
+                                            <input class="form-control" type="text" placeholder="0000 0000 0000 0000" formControlName="cardNumber" >
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">
+                                                    <i class="mdi mdi-credit-card"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-sm-4">
+                                    <label for="ccmonth">Month</label>
+                                    <select class="form-control" id="ccmonth" formControlName="expMonth">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select>
+                                    
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label for="ccyear">Year</label>
+                                    <select class="form-control" id="ccyear" formControlName="expYear">
+                                        <option>2021</option>
+                                        <option>2022</option>
+                                        <option>2023</option>
+                                        <option>2024</option>
+                                        <option>2025</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="cvv">CVV/CVC</label>
+                                        <input class="form-control" id="cvv" type="text" placeholder="123" formControlName="cvv">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                       
+                    </div>
+                    <div class="card-footer text-end">
+                        <button class="btn btn-success" type="submit" (click)="pay()"> Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

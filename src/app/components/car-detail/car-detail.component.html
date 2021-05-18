@@ -1,0 +1,73 @@
+
+<div class="card rounded-0 mt-4">
+    <div class="card-header text-center rounded-0 mt-4">
+      <div class="card-body" *ngIf="carDetails">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner  d-flex "
+             style=" min-height: 20rem; max-height: 35rem">
+              <div *ngFor="let carImage of carDetails.imagePath;  first as firstImage"
+              class="carousel-item align-self-center"
+                [ngClass]="{ active: firstImage }"
+              style="height: 100%; width: 100%">
+                 <img src="https://localhost:44367/{{carImage}}"  style="height: 100%; width: 100%; object-fit: contain"/>
+              </div>
+              
+             </div>
+              <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          
+    
+        </div>
+        
+ </div>
+    
+<div class="mt-5 " *ngIf="carDetails">
+    <p class="d-flex justify-content-center fs-1 fw-bold">{{carDetails.carName}}</p>
+    <div class="table-responsive">
+        <table class="table table-striped align-middle">
+            <tbody class="fs-4">
+                <tr >
+                    <td class="fw-bold" >Model</td>
+                    <td class="fw-light" >{{carDetails.carName}}</td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">Brand</td>
+                    <td class="fw-light">{{carDetails.brandName}}</td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">Model Year</td>
+                    <td class="fw-light">{{carDetails.modelYear}}</td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">Color</td>
+                    <td class="fw-light">{{carDetails.colorName}}</td>
+                </tr>
+                <tr>
+                    <td class="fw-bold">Daily Price</td>
+                    <td class="fw-light">{{carDetails.dailyPrice}}$</td>
+                </tr>
+            </tbody>
+            
+        </table>
+    </div>
+    <div class="text-center">
+        <p class="mt-3 mb-5 fs-3">{{carDetails.description}}</p>
+        <button class="mt-2 col-5 mb-5 btn btn-success btn-lg" routerLink="/cars/rent/{{carDetails.id}}">Rent</button>
+    </div>
+    
+    
+</div>
+    
+    
