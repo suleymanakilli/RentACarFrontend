@@ -8,8 +8,14 @@ Bu projeyi yine backend kısmında olduğu gibi burada da SOLID kurallarına uya
 ![fe3](https://user-images.githubusercontent.com/59077389/118627282-4136eb00-b7d4-11eb-9c62-06d0a1261bee.JPG)
 ![fe4](https://user-images.githubusercontent.com/59077389/118627286-4136eb00-b7d4-11eb-9b02-14f0a2214f72.JPG)
 ![fe5](https://user-images.githubusercontent.com/59077389/118627291-42681800-b7d4-11eb-9a31-069bcf9ccec5.JPG)
+
+Giriş yapılmadan önce : 
 ![fe6](https://user-images.githubusercontent.com/59077389/118627293-4300ae80-b7d4-11eb-88d0-13de60e3d5c2.JPG)
+
 ![fe7](https://user-images.githubusercontent.com/59077389/118627296-4300ae80-b7d4-11eb-9cd5-339d48edba7c.JPG)
+
+
+Giriş yapıldıktan sonra : 
 ![fe8](https://user-images.githubusercontent.com/59077389/118627298-43994500-b7d4-11eb-8366-f654fda78ab6.JPG)
 ![fe9](https://user-images.githubusercontent.com/59077389/118627300-43994500-b7d4-11eb-8fb0-269c7832b3ea.JPG)
 
