@@ -1,5 +1,8 @@
 # RentACar
 
+Rent a Car projesinin frontend kısmı olan bu projeyi Angular kullanarak Engin Demiroğ hocamız ile yaptığımız kampa paralel olarak geliştirdim.
+Bu projeyi yine backend kısmında olduğu gibi burada da SOLID kurallarına uyarak AOP ile yazdık. Angular ile directive, admin-guard, interceptor ile aspect oriented programming, custom pipe kullanılarak hazırlanmıştır. Third party eklenti olarak bootstrap,toastr,jquery kullanılmıştır.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
 
 ## Development server
