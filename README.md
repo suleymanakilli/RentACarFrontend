@@ -18,7 +18,7 @@ Giriş yapılmadan önce :
 Giriş yapıldıktan sonra : 
 ![fe8](https://user-images.githubusercontent.com/59077389/118627298-43994500-b7d4-11eb-8366-f654fda78ab6.JPG)
 
-Giriş yapmadan araba ekleme sayfasına gitmeye çalıştığımızda
+Giriş yapmadan araba ekleme sayfasına gitmeye çalıştığımızda otomatik olarak login ekranına yönlendirme yapılıyor : 
 ![fe9](https://user-images.githubusercontent.com/59077389/118627300-43994500-b7d4-11eb-8fb0-269c7832b3ea.JPG)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
