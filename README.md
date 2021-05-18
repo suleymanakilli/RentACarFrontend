@@ -3,6 +3,16 @@
 Rent a Car projesinin frontend kısmı olan bu projeyi Angular kullanarak Engin Demiroğ hocamız ile yaptığımız kampa paralel olarak geliştirdim.
 Bu projeyi yine backend kısmında olduğu gibi burada da SOLID kurallarına uyarak AOP ile yazdık. Angular ile directive, admin-guard, interceptor ile aspect oriented programming, custom pipe kullanılarak hazırlanmıştır. Third party eklenti olarak bootstrap,toastr,jquery kullanılmıştır.
 
+![fe1](https://user-images.githubusercontent.com/59077389/118627272-3ed49100-b7d4-11eb-8a79-68f25e6d5085.JPG)
+![fe2](https://user-images.githubusercontent.com/59077389/118627279-3f6d2780-b7d4-11eb-8ff2-ff6cbc5b356b.JPG)
+![fe3](https://user-images.githubusercontent.com/59077389/118627282-4136eb00-b7d4-11eb-9c62-06d0a1261bee.JPG)
+![fe4](https://user-images.githubusercontent.com/59077389/118627286-4136eb00-b7d4-11eb-9b02-14f0a2214f72.JPG)
+![fe5](https://user-images.githubusercontent.com/59077389/118627291-42681800-b7d4-11eb-9a31-069bcf9ccec5.JPG)
+![fe6](https://user-images.githubusercontent.com/59077389/118627293-4300ae80-b7d4-11eb-88d0-13de60e3d5c2.JPG)
+![fe7](https://user-images.githubusercontent.com/59077389/118627296-4300ae80-b7d4-11eb-9cd5-339d48edba7c.JPG)
+![fe8](https://user-images.githubusercontent.com/59077389/118627298-43994500-b7d4-11eb-8366-f654fda78ab6.JPG)
+![fe9](https://user-images.githubusercontent.com/59077389/118627300-43994500-b7d4-11eb-8fb0-269c7832b3ea.JPG)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
 
 ## Development server
